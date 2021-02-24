@@ -2,8 +2,12 @@
 
 :root {
     --background-color-nav: #6700ee;
+    --background-hero: #6e00ff;
     --white: #fff;
     --logo: #00f7ff;
+    --meet: #ff64cb;
+    --featured-description: #3b3b3b;
+    --skills: #ff64cb;
 
 }
 body {
@@ -52,6 +56,100 @@ header {
 
 }
 
-.social-header {
+.social-header, .hero-design {
     display: none;
+}
+
+.hero {
+    background-color: var(--background-hero);
+    color: var(--white);
+    display: grid;
+    text-align: center;
+    padding: 4em;
+}
+
+.meet {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 200px;
+    font-weight: bold;
+    color: var(--meet);
+
+    span {
+        margin-top: 1em;
+        margin-right: .5em;
+    }
+
+    .pointer-svg {
+        width: 70%;
+    }
+
+}
+
+.scroll {
+    width: 30px;
+    margin-top: 2em ;
+     
+}
+
+section {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.featured {
+    position: relative;
+
+
+}
+.featured::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #e5d5fa;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--background-hero);
+    letter-spacing: .2em;
+    font: .85em;
+}
+
+.featured-title {
+    color: black;
+    font-weight: 700;
+    margin-top: -.9em;
+    display: block;
+}
+
+.featured-description {
+    color: var(--featured-description)
+}
+
+.skills {
+    background: var(--skills);
+}
+
+.skills-container ul li {
+    background: var(--white);
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+
+    .icon-container {
+        height: 100px;
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
+
+        
+    }
 }
