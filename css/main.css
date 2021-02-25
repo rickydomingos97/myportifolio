@@ -7,6 +7,7 @@
   --meet: #ff64cb;
   --featured-description: #3b3b3b;
   --skills: #ff64cb;
+  --portifolio: #f7f7f7;
 }
 
 body {
@@ -160,5 +161,90 @@ section {
   display: grid;
   place-content: center;
   margin: 0 auto;
+}
+
+.skills-container ul li .icon-container.one, .skills-container ul li .icon-container.two, .skills-container ul li .icon-container.three {
+  width: 50px;
+}
+
+.skills-container ul li .skill-title {
+  font-weight: bold;
+}
+
+.skills-container ul li .featured-desc {
+  margin-bottom: 2em;
+}
+
+.portifolio {
+  background: var(--portifolio);
+}
+
+.portifolio-container a img {
+  border-radius: 1em;
+  margin-top: 2em;
+}
+
+@media only screen and (min-width: 800px) {
+  .featured, .portifolio {
+    text-align: left;
+  }
+  .featured, .portifolio-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% auto;
+        grid-template-columns: 40% auto;
+  }
+  .left, .portifolio-left {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .right {
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+  .skills {
+    margin-top: -5em;
+    margin-bottom: -7em;
+    padding-top: 7em;
+  }
+  .skills-container ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+  }
+  .portifolio {
+    padding-top: 7em;
+  }
+  .portifolio-container img {
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .hero {
+    height: 90vh;
+  }
+  .nav-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 66% auto;
+        grid-template-columns: 66% auto;
+    background: unset;
+  }
+  .nav-container header {
+    background: var(--background-color-nav);
+  }
+  header {
+    padding: 2em 2em 2em 4em;
+  }
+  .social-header {
+    padding: 2em 2em 2em 0;
+  }
+  .section {
+    padding: 4em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
