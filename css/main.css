@@ -227,9 +227,6 @@ footer p {
 }
 
 @media screen and (max-width: 800px) {
-  ul li {
-    display: none;
-  }
   footer {
     display: none;
   }
